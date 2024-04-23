@@ -1,0 +1,18 @@
+<p>Quien sos?</p>
+<p>decime dale dale</p>
+
+<p>Nombre</p>
+<input type="text" name="" id="" [(ngModel)]="usuario" />
+
+<p>{{ usuario }}</p>
+
+<p>Contraseña</p>
+<input type="text" name="" id="" [(ngModel)]="clave" />
+
+<p>{{ clave }}</p>
+
+@if (usuario == this.user.nombre && clave == this.user.clave) {
+<app-bienvenido></app-bienvenido>
+}@else {
+<app-error></app-error>
+}

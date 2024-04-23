@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.nav-list ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.btn-inicio-sesion{
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 5px;
+    color: blue;
+}
+
+.btn-inicio-sesion:hover{
+    background-color: blue;
+    color: aliceblue;
+    border: 1px solid black;
+}
