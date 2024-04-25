@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../modelos/usuario';
 import { FormsModule } from '@angular/forms';
 import { BienvenidoComponent } from '../bienvenido/bienvenido.component';
@@ -12,8 +12,8 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
-  user : Usuario = new Usuario("Augusto", "12345")
+export class LoginComponent implements OnInit{
+  user! : Usuario
   usuario : string = ""
   clave : string = ""
 
@@ -23,6 +23,15 @@ export class LoginComponent {
 
   goTo(path: string) {
     this.router.navigate([path]);
+  }
+
+  ngOnInit(): void {
+    const usuarioStr = localStorage.getItem("usuario");
+
+    this.user = JSON.parse(usuarioStr!);
+
+    console.log(this.user);
+    
   }
 
   validarUsuario(){

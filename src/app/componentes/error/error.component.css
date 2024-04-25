@@ -1,0 +1,15 @@
+p{
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 500px;
+}
